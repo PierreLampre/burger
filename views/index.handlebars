@@ -1,0 +1,42 @@
+<div id="container">
+
+  <h1>CRUD Burger POS System</h1>
+
+  <h2>Because so many things will be misheard before they are misread!</h2>
+
+  <h2>New Order</h2>
+  <h4>Process incoming orders here:</h4>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="burg">Burger Name:</label>
+      <input type="text" id="burg" name="name">
+    </div>
+
+    <button type="submit">Add Burger</button>
+  </form>
+
+  <div id="orders-placed">
+    <h2>Orders Placed</h2>
+    <h4>Cooking staff: When orders are ready, click "MADE!"</h4>
+    <ul>
+      {{#each burgers}}
+      {{#unless made}}
+      {{> burgers/burger-block made=true}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div id="orders-up">
+    <h2>Orders Up</h2>
+    <h4>Cooking staff: If hit "MADE!" by mistake, click "NOT MADE?"</h4>
+    <ul>
+      {{#each burgers}}
+      {{#if made}}
+      {{> burgers/burger-block made=false}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
