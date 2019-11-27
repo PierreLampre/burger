@@ -1,3 +1,77 @@
+body {
+  background-color: rgb(233, 238, 202);
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr; 
+}
+
+#headings-and-form {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-items: center;
+  justify-items: center;
+}
+
+#headings {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.create-form {
+  display: flex;
+}
+
+#orders-placed {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-items: center;
+  justify-items: center;
+  border: 2px solid black;
+  margin: 0px 10px 0px 20px;
+}
+
+#orders-up {
+  display: grid;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-items: center;
+  justify-items: center;
+  border: 2px solid black;
+  margin: 0px 20px 0px 10px;
+}
+
+#burgers-and-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burger-jawn {
+  width: 100px;
+  height: 100px;
+}
+
+.with-bg-color {
+  background-color: #faebd7;
+  padding: 15px;
+  border: 1px solid black;
+}
+
 li {
     padding: 5px;
     margin: 5px;
@@ -8,13 +82,5 @@ li {
     font-weight: bold;
   }
   
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
+
   
